@@ -21,7 +21,8 @@ app.use("/api/upload", uploadRoutes);
 const dashboardRoutes = require('./routes/dashboard');
 app.use('/api/stat', dashboardRoutes);
 
-
+const candidatRoutes = require('./routes/candidats.routes');
+app.use('/api', candidatRoutes);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Serveur lancé sur le port ${PORT}`));
+app.listen(PORT, () => console.log(`Serveur lancé sur le port http://localhost:${PORT}`));
